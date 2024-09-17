@@ -13,13 +13,28 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             color: white;
-            text-shadow: 2px 2px 4px #000000;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
         }
+
         #message {
-            font-size: 2em;
+            font-size: 3em;
             text-align: center;
+            background: linear-gradient(45deg, #ff6ec4, #7873f5, #42e695);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: neonGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            0% {
+                text-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #ff6ec4, 0 0 50px #7873f5, 0 0 60px #42e695, 0 0 70px #42e695;
+            }
+            100% {
+                text-shadow: 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #ff6ec4, 0 0 50px #ff6ec4, 0 0 60px #7873f5, 0 0 70px #42e695, 0 0 80px #42e695;
+            }
         }
     </style>
 </head>
@@ -28,16 +43,47 @@
 
     <script>
         const messages = [
-            "Eu te amo, Tanyelly",
-            "I love you, Tanyelly",
-            "Te amo, Tanyelly",
-            "Je t'aime, Tanyelly",
-            "Ich liebe dich, Tanyelly",
-            "Ti amo, Tanyelly",
-            "Я люблю тебя, Таниелли",
-            "愛してる, タニエリ",
-            "사랑해, 타니엘리",
-            "我爱你, 塔尼艾莉"
+            "Eu te amo, Tanyelly",         // Português
+            "I love you, Tanyelly",        // Inglês
+            "Te amo, Tanyelly",            // Espanhol
+            "Je t'aime, Tanyelly",         // Francês
+            "Ich liebe dich, Tanyelly",    // Alemão
+            "Ti amo, Tanyelly",            // Italiano
+            "Я люблю тебя, Таниелли",      // Russo
+            "愛してる, タニエリ",            // Japonês
+            "사랑해, 타니엘리",              // Coreano
+            "我爱你, 塔尼艾莉",              // Chinês (Mandarim)
+            "Nakupenda, Tanyelly",         // Swahili
+            "Ek het jou lief, Tanyelly",   // Afrikaans
+            "Kocham cię, Tanyelly",        // Polonês
+            "Te iubesc, Tanyelly",         // Romeno
+            "S'agapo, Tanyelly",           // Grego
+            "Aš tave myliu, Tanyelly",     // Lituano
+            "Jag älskar dig, Tanyelly",    // Sueco
+            "Volim te, Tanyelly",          // Croata
+            "T'estimo, Tanyelly",          // Catalão
+            "Te dua, Tanyelly",            // Albanês
+            "Mahal kita, Tanyelly",        // Filipino
+            "Ngiyakuthanda, Tanyelly",     // Zulu
+            "Jeg elsker deg, Tanyelly",    // Norueguês
+            "Amo-te, Tanyelly",            // Português (de Portugal)
+            "Eu luv' u, Tanyelly",         // Crioulo Haitiano
+            "Ndinokuda, Tanyelly",         // Shona
+            "Mi amas vin, Tanyelly",       // Esperanto
+            "Kimi o ai shiteru, Tanyelly", // Japonês (formal)
+            "Szeretlek, Tanyelly",         // Húngaro
+            "Bahibek, Tanyelly",           // Árabe (feminino)
+            "Mo ni fe, Tanyelly",          // Yoruba
+            "Naku penda, Tanyelly",        // Luganda
+            "Ana behibek, Tanyelly",       // Árabe (outra variação)
+            "Te quiero, Tanyelly",         // Espanhol (informal)
+            "Ich hab dich lieb, Tanyelly", // Alemão (informal)
+            "Meile tu, Tanyelly",          // Letão
+            "Te sakam, Tanyelly",          // Macedônio
+            "Tave myliu, Tanyelly",        // Lituano
+            "Miłość do ciebie, Tanyelly",  // Polonês (variação)
+            "Wo ai ni, Tanyelly",          // Chinês (Mandarim alternativo)
+            "E iubesc, Tanyelly",          // Romeno (alternativo)
         ];
 
         let index = 0;

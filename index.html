@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo, Tanyelly</title>
+    <style>
+        body {
+            background-image: url('https://example.com/flores.jpg'); /* Substitua pelo URL da imagem de flores que você deseja usar */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        #message {
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Eu te amo, Tanyelly</div>
+
+    <script>
+        const messages = [
+            "Eu te amo, Tanyelly",
+            "I love you, Tanyelly",
+            "Te amo, Tanyelly",
+            "Je t'aime, Tanyelly",
+            "Ich liebe dich, Tanyelly",
+            "Ti amo, Tanyelly",
+            "Я люблю тебя, Таниелли",
+            "愛してる, タニエリ",
+            "사랑해, 타니엘리",
+            "我爱你, 塔尼艾莉"
+        ];
+
+        let index = 0;
+        setInterval(() => {
+            index = (index + 1) % messages.length;
+            document.getElementById('message').textContent = messages[index];
+        }, 3000);
+    </script>
+</body>
+</html>
